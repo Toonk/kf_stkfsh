@@ -22,24 +22,24 @@ class TimeBetweenTimestampsCounterTest < Minitest::Test
     assert_raises(klass::InvalidTimeDifference) { klass.new([], 'time_difference') }
   end
 
-  def test_calculate_solution_method_on_class_raises_no_method_error
-    assert_raises(NoMethodError) { klass.calculate_solution }
+  def test_count_method_on_class_raises_no_method_error
+    assert_raises(NoMethodError) { klass.count }
   end
 
-  def test_calculate_solution_method_with_empty_array_should_return_0
-    assert_equal 0, klass.new.calculate_solution
+  def test_count_method_with_empty_array_should_return_0
+    assert_equal 0, klass.new.count
   end
 
-  def test_calculate_solution_method_with_one_element_array_should_return_0
-    assert_equal 0, klass.new([0]).calculate_solution
+  def test_count_method_with_one_element_array_should_return_0
+    assert_equal 0, klass.new([0]).count
   end
 
-  def test_calculate_solution_method_should_return_0
-    assert_equal 0, klass.new([0, 7200]).calculate_solution
+  def test_count_method_should_return_0
+    assert_equal 0, klass.new([0, 7200]).count
   end
 
-  def test_calculate_solution_method_should_return_1
-    assert_equal 1, klass.new([0, 7201]).calculate_solution
+  def test_count_method_should_return_1
+    assert_equal 1, klass.new([0, 7201]).count
   end
 
   private

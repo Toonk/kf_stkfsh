@@ -16,7 +16,7 @@ class TimeBetweenTimestampsCounter
     validate_attributes
   end
 
-  def calculate_solution
+  def count
     @array.length.times do |i|
       next if (next_element = @array[i + 1]).nil?
 
