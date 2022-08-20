@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  kf_stkfsh:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    volumes:
+      - .:/usr/app
